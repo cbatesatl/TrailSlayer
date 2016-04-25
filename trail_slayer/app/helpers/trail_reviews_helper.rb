@@ -1,0 +1,2 @@
+module TrailReviewsHelper
+end
