@@ -1,0 +1,3 @@
+mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
+rm app/assets/stylesheets/bootstrap-generators.scss
+mv app/assets/stylesheets/bootstrap-variables.scss app/assets/stylesheets/_bootstrap-variables.scss
