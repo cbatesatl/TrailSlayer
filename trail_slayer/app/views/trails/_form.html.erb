@@ -1,0 +1,74 @@
+<%= form_for(@trail, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @trail.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@trail.errors.count, "error") %> prohibited this trail from being saved:</h4>
+
+      <ul>
+      <% @trail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :trail_name, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :trail_name, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :photo_url, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :photo_url, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :skill_level, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :skill_level, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :trail_type, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :trail_type, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :elevation, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :elevation, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :elevation_change, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :elevation_change, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :location, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :location, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :user_reviews, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :user_reviews, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

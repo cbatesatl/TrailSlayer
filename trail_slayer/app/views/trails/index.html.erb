@@ -1,0 +1,45 @@
+<div class="page-header">
+  <%= link_to new_trail_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Trail
+  <% end %>
+  <h1>Listing trails</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Trail name</th>
+            <th>Photo url</th>
+            <th>Skill level</th>
+            <th>Trail type</th>
+            <th>Elevation</th>
+            <th>Elevation change</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>User reviews</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @trails) do |trail| %>
+            <td><%= trail.trail_name %></td>
+            <td><%= trail.photo_url %></td>
+            <td><%= trail.skill_level %></td>
+            <td><%= trail.trail_type %></td>
+            <td><%= trail.elevation %></td>
+            <td><%= trail.elevation_change %></td>
+            <td><%= trail.description %></td>
+            <td><%= trail.location %></td>
+            <td><%= trail.user_reviews %></td>
+            <td><%= link_to 'Show', trail %></td>
+        <td><%= link_to 'Edit', edit_trail_path(trail) %></td>
+        <td><%= link_to 'Destroy', trail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
