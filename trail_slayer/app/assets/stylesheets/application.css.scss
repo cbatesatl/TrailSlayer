@@ -1,7 +1,10 @@
+@import "superhero-variables.scss";
 @import "bootstrap-variables.scss";
 @import "bootstrap-custom-variables.scss";
 @import "bootstrap-sprockets.scss";
 @import "bootstrap.scss";
+@import "superhero.scss";
+
 
 body {
   padding-top: $navbar-height + 10px;
@@ -11,3 +14,6 @@ main {
   margin: 20px auto;
   width: 800px;
 }
+
+
+
