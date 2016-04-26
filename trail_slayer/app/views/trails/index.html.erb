@@ -13,10 +13,9 @@
             <th>Trail name</th>
             <th>Skill level</th>
             <th>Trail type</th>
-            <th>Elevation</th>
+            <th>Mileage</th>
             <th>Description</th>
             <th>Location</th>
-            <th>User reviews</th>
             <th></th>
         <th></th>
         <th></th>
@@ -28,13 +27,11 @@
             <td><%= trail.trail_name %></td>
             <td><%= trail.skill_level %></td>
             <td><%= trail.trail_type %></td>
-            <td><%= trail.elevation %></td>
+            <td><%= trail.mileage %></td>
             <td><%= trail.description %></td>
             <td><%= trail.location %></td>
-            <td><%= trail.user_reviews %></td>
-            <td><%= link_to 'Details', trail %></td>
-
-
+            <td><%= link_to "Details", trail %></td>
+            <td><%= link_to 'Edit', edit_trail_path(trail) %></td>
       <% end %>
     </tbody>
   </table>

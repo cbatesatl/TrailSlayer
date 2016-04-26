@@ -1,19 +1,43 @@
-@import "superhero-variables.scss";
+@import "yeti-variables.scss";
 @import "bootstrap-variables.scss";
 @import "bootstrap-custom-variables.scss";
 @import "bootstrap-sprockets.scss";
 @import "bootstrap.scss";
-@import "superhero.scss";
+@import "yeti.scss";
 
 
 body {
   padding-top: $navbar-height + 10px;
-}
+
+  }
+
 
 main {
-  margin: 20px auto;
+  margin: 50px auto;
   width: 800px;
 }
 
+.page-header {
+  a.btn {
+    float: right;
+  }
+
+  a.btn + a.btn {
+    margin-right: 8px;
+  }
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: initial;
+  height: initial;
+  margin-top: 7px;
+}
+
+
+.trails {
+  th, td {
+    text-align:center
+  }
+}
 
 
