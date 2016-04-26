@@ -40,6 +40,7 @@ class TrailsController < ApplicationController
   # PATCH/PUT /trails/1
   # PATCH/PUT /trails/1.json
   def update
+
     respond_to do |format|
       if @trail.update(trail_params)
         format.html { redirect_to @trail, notice: 'Trail was successfully updated.' }

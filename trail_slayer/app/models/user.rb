@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   # has_many :trails, through: :trail_reviews, dependent: :destroy
   has_many :trail_reviews
 
+
   before_save { email.downcase! }
 
   validates :first_name, :last_name, presence: true

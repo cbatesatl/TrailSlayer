@@ -14,7 +14,11 @@ class TrailReviewsController < ApplicationController
 
   # GET /trail_reviews/new
   def new
-    @trail_review = TrailReview.new
+    @user_id = current_user
+    @trail_review = @user_id.trail_reviews.new
+    @trail = Trail.find(params[:format])
+    @trail_review = @trail.trail_reviews.new
+
   end
 
   # GET /trail_reviews/1/edit
