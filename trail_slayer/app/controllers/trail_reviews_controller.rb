@@ -31,7 +31,7 @@ class TrailReviewsController < ApplicationController
 
     respond_to do |format|
       if @trail_review.save
-        format.html { redirect_to @trail_review, notice: 'Trail review was successfully created.' }
+        format.html { redirect_to "#", notice: 'Trail review was successfully created.' }
         format.json { render :show, status: :created, location: @trail_review }
       else
         format.html { render :new }
