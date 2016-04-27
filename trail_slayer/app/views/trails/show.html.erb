@@ -29,18 +29,20 @@
 
 </dl>
 
-<%= link_to new_trail_review_path(trail: @trail.id), class: 'btn btn-default' do %>
-  <span class="glyphicon glyphicon-list-alt"></span>
-  Add Review
-<% end %>
+
 
 <% @trail.trail_reviews.each do |review| %>
 <div class="form-group">
   <label for="comment"></label>
-  <textarea class="form-control" rows="5" id="comment"><%= "#{review.user.first_name} #{review.user.last_name}" %>
-  <%= " #{review.review}" %> </textarea>
+  <textarea class="form-control" rows="5" id="comment"><%= "#{review.created_at}"%>
+  <%= "#{review.user.first_name} #{review.user.last_name}" %>
+  <%= "#{review.review}" %> </textarea>
 
 </div>
 
+<% end %>
+<%= link_to new_trail_review_path(trail: @trail.id), class: 'btn btn-default' do %>
+  <span class="glyphicon glyphicon-list-alt"></span>
+  Add Review
 <% end %>
 

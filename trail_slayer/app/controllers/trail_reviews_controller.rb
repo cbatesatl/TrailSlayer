@@ -45,7 +45,7 @@ class TrailReviewsController < ApplicationController
   def update
     respond_to do |format|
       if @trail_review.update(trail_review_params)
-        format.html { redirect_to @trail_review, notice: 'Trail review was successfully updated.' }
+        format.html { redirect_to trail_path notice: 'Trail review was successfully updated.' }
         format.json { render :show, status: :ok, location: @trail_review }
       else
         format.html { render :edit }

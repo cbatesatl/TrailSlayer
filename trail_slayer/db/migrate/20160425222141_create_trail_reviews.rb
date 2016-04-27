@@ -5,7 +5,7 @@ class CreateTrailReviews < ActiveRecord::Migration
       t.integer :trail_id
       t.text :review
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
