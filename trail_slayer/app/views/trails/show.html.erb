@@ -27,6 +27,15 @@
   <dt>Location:</dt>
   <dd><%= @trail.location %></dd>
 
-
-
 </dl>
+
+<%= link_to new_trail_review_path(trail: @trail.id), class: 'btn btn-default' do %>
+  <span class="glyphicon glyphicon-list-alt"></span>
+  Review
+<% end %>
+
+<% @trail.trail_reviews.each do |review| %>
+  <p><%= "Author: #{review.user.first_name} #{review.user.last_name} #{review.review}"%></p>
+
+<% end %>
+

@@ -1,8 +1,5 @@
 <div class="page-header">
-  <%= link_to new_trail_review_path, class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-plus"></span>
-    New Trail review
-  <% end %>
+
   <%= link_to trails_path, class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
@@ -29,7 +26,6 @@
             <td><%= trail_review.trail_id %></td>
             <td><%= trail_review.review %></td>
             <td><%= link_to 'Show', trail_review %></td>
-        <td><%= link_to 'Edit', edit_trail_review_path(trail_review) %></td>
         <td><%= link_to 'Destroy', trail_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tbody>

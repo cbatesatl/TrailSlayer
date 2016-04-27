@@ -1,5 +1,6 @@
 class TrailReviewsController < ApplicationController
   before_action :set_trail_review, only: [:show, :edit, :update, :destroy]
+  # before_action :signed_in_user
 
   # GET /trail_reviews
   # GET /trail_reviews.json
@@ -12,15 +13,11 @@ class TrailReviewsController < ApplicationController
   def show
   end
 
-  # GET /trail_reviews/new
+  # GET /trail_reviews/new?trail=:id
   def new
-    @user_id = current_user
-    @trail_review = @user_id.trail_reviews.new
-    @trail = Trail.find(params[:format])
+    @trail = Trail.find(params[:trail])
     @trail_review = @trail.trail_reviews.new
-
   end
-
   # GET /trail_reviews/1/edit
   def edit
   end
@@ -29,6 +26,8 @@ class TrailReviewsController < ApplicationController
   # POST /trail_reviews.json
   def create
     @trail_review = TrailReview.new(trail_review_params)
+    @trail_review.user = current_user
+
 
     respond_to do |format|
       if @trail_review.save
@@ -58,8 +57,8 @@ class TrailReviewsController < ApplicationController
   # DELETE /trail_reviews/1
   # DELETE /trail_reviews/1.json
   def destroy
-    @trail_review.destroy
-    respond_to do |format|
+      @trail_review.destroy
+      respond_to do |format|
       format.html { redirect_to trail_reviews_url, notice: 'Trail review was successfully destroyed.' }
       format.json { head :no_content }
     end

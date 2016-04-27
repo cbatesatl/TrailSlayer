@@ -9,11 +9,9 @@ Trail.destroy_all
 
 Trail.create(
   trail_name: "Blankets Creek",
-
   skill_level: "Medium",
   trail_type: "Singletrack",
   mileage: "15 miles",
-
   description:
    "\nBlankets Creek is one of the premiere mountain bike trail systems in the Atlanta Metro Area. While perhaps not technically in the metro area (depends who you ask), this Woodstock trail is close enough to the city to draw a flood of riders up here every day of the week.\n\nThanks to the popularity, SORBA Woodstock has recently been able to vastly expand the parking area and add new trailhead facilities, such as flush toilets.\n\nAs for the trails themselves, Blankets Creek is an excellent example of a stacked-loop trail system. Short, flat, easy trails are accessible right from the parking lot for beginner riders, but keep heading further in and you'll experience intermediate singletrack as well as advanced trails full of rocks, jumps, berms, and some serious exposure. \n\nWhile Blankets is definitely busy and can get crowded sometimes, the reputation and the popularity has been well-earned. Directional travel (depending on day) helps keep the trails from feeling too congested once you get away from the parking lot, so if you have never ridden at Blankets Creek before, be sure to carve time out of your schedule to do so!\n\nPrevious Description:\n\nSeveral singletrack loops at the edge of Lake Allatoona including the Van Michael, Dwelling, and South loops. Good signage and directional travel by day.\nBeginner: 2.0 Miles Total\nIntermediate: 4.2 Miles Total\nAdvanced: 8.1 Miles Total\nExpert (Downhill): .25 Miles Total",
   location: "2261 Sixes Rd. Canton GA 30114"
@@ -21,7 +19,6 @@ Trail.create(
 
 Trail.create(
   trail_name: "Big Creek",
-
   skill_level: "Medium",
   trail_type: "Singletrack",
   mileage: "6 miles",
@@ -57,11 +54,9 @@ Night riding at specific times, with approved leaders only.",
  )
 Trail.create(
   trail_name: "Chicopee Woods",
-
   skill_level: "Medium",
   trail_type: "Singletrack",
   mileage: "21 miles",
-
   description:
    "The Chicopee Woods Mountain Bike Park is a well maintained group of trails kept by the Gainesville SORBA chapter. There are over 21 miles of dedicated Mountain Bike trails made up of several loops. There's a 2.6 mile beginner friendly trail named The Tortoise Loop. Four intermediate level trails totaling 14 miles include the Red Tail loop, Flying Squirrel, White Tail loop and Coyote trail. The Copperhead Gap trail is 4.5 miles and the most technical trail in the system. Trail maps are posted at the main trailhead kiosk in the parking lot as well as at major intersections along the trail system. The trails are closed at sunset and after significant rain. For more information and current trail status visit www.gainesvillesorba.org.
 Night riding at specific times, with approved leaders only.",
