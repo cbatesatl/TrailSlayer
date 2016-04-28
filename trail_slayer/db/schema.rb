@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20160426001826) do
     t.integer  "user_id"
     t.integer  "trail_id"
     t.text     "review"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "trails", force: :cascade do |t|

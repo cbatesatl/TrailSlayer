@@ -13,6 +13,7 @@ class TrailReviewsController < ApplicationController
   def show
   end
 
+
   # GET /trail_reviews/new?trail=:id
   def new
     @trail = Trail.find(params[:trail])

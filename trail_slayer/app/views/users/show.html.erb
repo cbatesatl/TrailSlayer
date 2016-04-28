@@ -5,7 +5,14 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
+<%= link_to trails_path, class: 'btn btn-default'  do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
 
+<%= form_for @user, method: :delete do |f| %>
+ <%= f.submit "Delete!", class: 'btn btn-primary' %>
+<% end %>
 
   <h1>User Details</h1>
 </div>

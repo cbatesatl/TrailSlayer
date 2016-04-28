@@ -34,13 +34,18 @@
 <% @trail.trail_reviews.each do |review| %>
 <div class="form-group">
   <label for="comment"></label>
-  <textarea class="form-control" rows="5" id="comment"><%= "#{review.created_at}"%>
+  <textarea class="form-control" rows="5" id="comment">
+  <%= "#{review.created_at}"%>
   <%= "#{review.user.first_name} #{review.user.last_name}" %>
-  <%= "#{review.review}" %> </textarea>
-
-</div>
-
+  <%= "#{review.review}" %>
+    </textarea>
+    </div>
 <% end %>
+ <!--  <% if defined?(show) && (@user.trail_review == current_user) %>
+  <%= link_to 'Destroy', @trail_review, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %> -->
+
+
 <%= link_to new_trail_review_path(trail: @trail.id), class: 'btn btn-default' do %>
   <span class="glyphicon glyphicon-list-alt"></span>
   Add Review
