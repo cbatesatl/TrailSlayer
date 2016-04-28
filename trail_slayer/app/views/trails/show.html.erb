@@ -41,9 +41,9 @@
     </textarea>
     </div>
 <% end %>
- <!--  <% if defined?(show) && (@user.trail_review == current_user) %>
+   <% if defined?(show) && (@user.trail_review == current_user) %>
   <%= link_to 'Destroy', @trail_review, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %> -->
+<% end %>
 
 
 <%= link_to new_trail_review_path(trail: @trail.id), class: 'btn btn-default' do %>
