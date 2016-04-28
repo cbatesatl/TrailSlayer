@@ -16,6 +16,7 @@ class TrailReviewsController < ApplicationController
 
   # GET /trail_reviews/new?trail=:id
   def new
+    puts "???????? #{params}"
     @trail = Trail.find(params[:trail])
     @trail_review = @trail.trail_reviews.new
   end
@@ -26,13 +27,14 @@ class TrailReviewsController < ApplicationController
   # POST /trail_reviews
   # POST /trail_reviews.json
   def create
+    puts "!!!!!!!!! #{params}"
     @trail_review = TrailReview.new(trail_review_params)
     @trail_review.user = current_user
 
 
     respond_to do |format|
       if @trail_review.save
-        format.html { redirect_to "#", notice: 'Trail review was successfully created.' }
+        format.html { redirect_to trail_path(params[:trail_review][:trail_id]), notice: 'Trail review was successfully created.' }
         format.json { render :show, status: :created, location: @trail_review }
       else
         format.html { render :new }

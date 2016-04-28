@@ -40,14 +40,18 @@
   <%= "#{review.review}" %>
     </textarea>
     </div>
+<%= link_to 'Destroy', @trail_review, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+
 <% end %>
    <% if defined?(show) && (@user.trail_review == current_user) %>
   <%= link_to 'Destroy', @trail_review, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
-
+<div>
 <%= link_to new_trail_review_path(trail: @trail.id), class: 'btn btn-default' do %>
   <span class="glyphicon glyphicon-list-alt"></span>
   Add Review
 <% end %>
-
+</div>
