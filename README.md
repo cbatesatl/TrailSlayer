@@ -17,7 +17,7 @@ Trello [My Trello Page] (https://trello.com/b/Lmn7t3S9/trail-slayer)
 
 ## Model Diagram
 
-![alt text](http://i.imgur.com/XqzQd2D.png)
+![alt text](http://i.imgur.com/GrEW73R.png)
 
 Trails slayer uses three models. Trail reviews has a one to many relationship with User and Trail. 
 ## Screen Shots
