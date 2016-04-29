@@ -62,7 +62,7 @@ class TrailReviewsController < ApplicationController
   def destroy
       @trail_review.destroy
       respond_to do |format|
-      format.html { redirect_to trail_reviews_url, notice: 'Trail review was successfully destroyed.' }
+      format.html { redirect_to "#", notice: 'Trail review was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

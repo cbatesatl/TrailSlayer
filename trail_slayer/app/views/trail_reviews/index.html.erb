@@ -8,7 +8,7 @@
 </div>
 
 <div class="table-responsive">
-  <table class="table table-striped table-bordered table-hover">
+  <table class="table table-striped table-bordered ">
     <thead>
       <tr>
             <th>User</th>
@@ -26,7 +26,7 @@
             <td><%= trail_review.trail_id %></td>
             <td><%= trail_review.review %></td>
             <td><%= link_to 'Show', trail_review %></td>
-        <td><%= link_to 'Destroy', trail_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Delete', trail_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tbody>
   </table>

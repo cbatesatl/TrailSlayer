@@ -22,7 +22,7 @@
 
 
   <dt>Description:</dt>
-  <dd><%= @trail.description %></dd>
+  <dd class="collapse-in"><%= @trail.description %></dd>
 
   <dt>Location:</dt>
   <dd><%= @trail.location %></dd>
@@ -38,20 +38,13 @@
   <%= "#{review.created_at}"%>
   <%= "#{review.user.first_name} #{review.user.last_name}" %>
   <%= "#{review.review}" %>
-    </textarea>
-    </div>
-<%= link_to 'Destroy', @trail_review, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </textarea>
 
-
-
+</div>
 <% end %>
-   <% if defined?(show) && (@user.trail_review == current_user) %>
-  <%= link_to 'Destroy', @trail_review, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
-
 <div>
-<%= link_to new_trail_review_path(trail: @trail.id), class: 'btn btn-default' do %>
+  <%= link_to new_trail_review_path(trail: @trail.id), class: 'btn btn-default' do %>
   <span class="glyphicon glyphicon-list-alt"></span>
   Add Review
-<% end %>
+  <% end %>
 </div>
