@@ -32,4 +32,4 @@ Review Page
 ## Future Updates
 Add a more detailed user model.  
 Allow users to view other users profiles with a link in the comments.  
-Add a mapping api.
+Add a google map api.
