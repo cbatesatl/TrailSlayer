@@ -1,28 +1,37 @@
-== README
+#Trail Slayer
+## App Info
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Trail Slayer. This app was designed for people in the Atlanta area to find information about mountain bike trails in Georgia. Users can add new trails if their favorite trail is missing. Users can also attach reviews to any trail and read reviews made by other members.
 
-Things you may want to cover:
+[Trail Slayer](https://floating-crag-68312.herokuapp.com/)
 
-* Ruby version
+## Technologies Used
+Heroku  
+Ruby 2.3.1  
+Rails 4.2  
+PostgreSQL 9.4  
+Twitter Bootstrap 3.3  
+SASS 3.4  
+Bootstrap-generators 3.3  
+Trello [My Trello Page] (https://trello.com/b/Lmn7t3S9/trail-slayer)
 
-* System dependencies
+## Model Diagram
 
-* Configuration
+![alt text](http://i.imgur.com/XqzQd2D.png)
 
-* Database creation
+Trails slayer uses three models. Trail reviews has a one to many relationship with User and Trail. 
+## Screen Shots
+Home Static Page  
+![alt text](http://i.imgur.com/jAQAup5.jpg)
+Trail Index Page
+![alt text](http://i.imgur.com/m7Jvk6o.png)
+Trail Add Page
+![alt text](http://i.imgur.com/mbabBxG.png)
+Review Page
+![alt text](http://i.imgur.com/MIqoUt9.png)
 
-* Database initialization
+## Future Updates
+Add a more detailed user model.  
+Allow users to view other users profiles with a link in the comments.  
+Add a mapping api.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
